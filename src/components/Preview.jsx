@@ -6,7 +6,7 @@ function StatusItem({ label, number }) {
 	return (
 		<Stack
 			as="li"
-			gap="0.2rem"
+			spacing="0.2rem"
 			fontSize="1.2rem"
 			textTransform="uppercase"
 			sx={{
@@ -15,7 +15,12 @@ function StatusItem({ label, number }) {
 				},
 			}}
 		>
-			<Text as="span" fontSize="2rem" fontWeight="700" color="#fff">
+			<Text
+				as="span"
+				fontSize="2rem"
+				fontWeight="700"
+				color="brand.white"
+			>
 				{number}
 			</Text>
 			<Text as="span" letterSpacing="0.8px">
@@ -26,15 +31,13 @@ function StatusItem({ label, number }) {
 }
 
 export default function Preview() {
-	const fontFamilyHeading = `'Inter', sans-serif`;
-
 	return (
 		<Flex
 			as="article"
 			direction="column"
 			w="100%"
 			maxW="42rem"
-			bgColor="#1b1938"
+			bgColor="brand.darkdesaturatedblue"
 			m="3rem 0 6rem"
 			borderRadius="8px"
 			overflow="hidden"
@@ -60,7 +63,7 @@ export default function Preview() {
 					pos="relative"
 					h="0"
 					pb="76%"
-					bgColor="#aa5cdb"
+					bgColor="brand.softviolet"
 					sx={{
 						'@media (min-width: 65em)': {
 							position: 'static',
@@ -82,7 +85,7 @@ export default function Preview() {
 						objectPosition="top"
 						opacity=".75"
 						sx={{
-							'mix-blend-mode': 'multiply',
+							mixBlendMode: 'multiply',
 							'@media (min-width: 65em)': {
 								position: 'static',
 							},
@@ -106,10 +109,9 @@ export default function Preview() {
 			>
 				<Heading
 					mb="1.6rem"
-					fontFamily={fontFamilyHeading}
 					fontSize="2.6rem"
 					fontWeight="700"
-					color="#fff"
+					color="brand.white"
 					lineHeight="1.25"
 					sx={{
 						'@media (min-width: 65em)': {
@@ -119,7 +121,11 @@ export default function Preview() {
 					}}
 				>
 					Get{' '}
-					<Text as="mark" bgColor="transparent" color="#aa5cdb">
+					<Text
+						as="mark"
+						bgColor="transparent"
+						color="brand.softviolet"
+					>
 						insights
 					</Text>{' '}
 					that help your business grow.
@@ -139,7 +145,7 @@ export default function Preview() {
 				</Text>
 				<Stack
 					as="ul"
-					gap="3rem"
+					spacing="3rem"
 					sx={{
 						'@media (min-width: 65em)': {
 							flexDir: 'row',
